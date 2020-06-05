@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://static.freshdev.io/fdk/2.0/assets/freshsales.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://static.freshdev.io/fdk/2.0/assets/fresh_client.js"></script>
+    <script src="./modal.js"></script>
+  </head>
+  <body>
+    <div class="container goal-form">
+      <div class="fw-widget-wrapper padding">
+        <form role="form" id="ticketForm">
+          <div class="form-group">
+            <label
+              for="example-number-input"
+              class="col-12 col-form-label lb-large"
+              style="font-size: 25px;"
+              >Number of Leads to create</label
+            >
+            <div class="col-10">
+              <input
+                class="form-control form-control-lg leads"
+                type="number"
+                value="0"
+                id="inputlg"
+                min="0"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label
+              for="example-number-input"
+              class="col-12 col-form-label lb-large"
+              style="font-size: 25px;"
+              >Number of Contacts to create</label
+            >
+            <div class="col-10">
+              <input
+                class="form-control form-control-lg contacts"
+                type="number"
+                value="0"
+                id="inputlg"
+                min="0"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label
+              for="example-number-input"
+              class="col-12 col-form-label lb-large"
+              style="font-size: 25px;"
+              >Number of Tasks to complete</label
+            >
+            <div class="col-10">
+              <input
+                class="form-control form-control-lg tasks"
+                type="number"
+                value="0"
+                id="inputlg"
+                min="0"
+              />
+            </div>
+          </div>
+        </form>
+
+        <div class="col-md-4 text-center">
+          <button id="store-goals" class="btn btn-primary lb-large">
+            Set Goals
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

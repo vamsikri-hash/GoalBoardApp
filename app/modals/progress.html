@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://static.freshdev.io/fdk/2.0/assets/freshsales.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://static.freshdev.io/fdk/2.0/assets/fresh_client.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@freshworks/crayons/dist/crayons/crayons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@freshworks/crayons/dist/crayons/crayons.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+  </head>
+
+  <body>
+    <div class="target-bar">
+      <h3>Today Targets</h3>
+      <div class="goals-det">
+        <div class="leads-det">
+          Leads to Create
+          <p class="leads-num"></p>
+        </div>
+        <div class="contacts-det">
+          Contacts to Create
+          <p class="contacts-num"></p>
+        </div>
+        <div class="tasks-det">
+          Tasks to complete
+          <p class="tasks-num"></p>
+        </div>
+      </div>
+    </div>
+    <fw-tabs>
+      <fw-tab tab-header="Graphical view">
+        <div class="progress-container">
+          <div class="appointment-details">
+            <div class="appoint-spin"></div>
+            <div class="hours-spent"></div>
+            <div class="yet-spent"></div>
+            <canvas id="appoint-chart" width="100" height="100"></canvas>
+          </div>
+          <div class="lead-details">
+            <div class="lead-spin"></div>
+            <canvas id="lead-chart" width="100" height="100"></canvas>
+          </div>
+          <div class="contact-details">
+            <div class="contact-spin"></div>
+            <canvas id="contact-chart" width="100" height="100"></canvas>
+          </div>
+          <div class="task-details">
+            <div class="task-spin"></div>
+            <canvas id="task-chart" width="100" height="100"></canvas>
+          </div>
+        </div>
+      </fw-tab>
+      <!-- textual summary goes here-->
+      <fw-tab tab-header="Textual-Summary" class="txt-sum">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Appointment Details</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Time spent</h6>
+            <p class="card-text apt-details">
+              <ul>
+                <li>There are <span class="up-apts"></span> upcoming appointments with a time span of <span class="up-time"></span></li>
+                <li>There are <span class="past-apts"></span> appointments occured till now where you spent <span class="past-time"></span></li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Leads Details</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Leads count</h6>
+            <p class="card-text ld-details">
+             <ul>
+               <li>You have created <span class="leadc-count"></span> leads today.</li>
+               <li>And you have updated <span class="leadu-count"> </span> leads today.</li>
+             </ul>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Contacts Details</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Contacts count</h6>
+            <p class="card-text ct-details">
+              <ul>
+                <li>You have created <span class="conc-count"></span> contacts today.</li>
+                <li>And you have updated <span class="conu-count"> </span> contacts today.
+                </li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Task Details</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Task count</h6>
+            <p class="card-text ts-details">
+              <ul>
+                <li>You have <span class="tasko-count"></span> tasks that need to be finished.</li>
+                <li>And you have  <span class="taskt-count"></span> tasks to be done today.
+                </li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </fw-tab>
+    </fw-tabs>
+  </body>
+  <script src="./progress.js"></script>
+</html>

@@ -1,0 +1,14 @@
+{
+  "platform-version": "2.0",
+  "product": {
+    "freshsales": {
+      "location": {
+        "sales_account_entity_menu": {
+          "url": "template.html",
+          "icon": "icon.svg"
+        }
+      }
+    }
+  },
+  "whitelisted-domains": ["https://www.freshsales.io"]
+}
