@@ -19,10 +19,33 @@ $(document).ready(function () {
                                     >
                                     View Progress
                                     </button>
-                              </div>`;
+                              </div>
+                              <div class="text-center">
+                                    <button
+                                    class="btn btn-primary"
+                                    id="del-goals"
+                                    style="margin-top: 20px;"
+                                    >
+                                    Delete Goals
+                                    </button>
+                              </div>
+                              `;
           $("#after-set").html(htmlData);
           $("#view-progress").click(function () {
             openProgressModal();
+          });
+          $("#del-goals").click(function () {
+            let bool = confirm("Are you sure you want to delete ?");
+            if (bool) {
+              client.db
+                .delete("targets")
+                .then(function (datab) {
+                  window.location.reload();
+                })
+                .catch(function (error) {
+                  console.error("error:", error);
+                });
+            }
           });
         })
         .catch(function (error) {

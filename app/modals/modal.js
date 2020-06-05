@@ -18,13 +18,17 @@ function addModalEvent() {
     const leads = $(".leads").val();
     const contacts = $(".contacts").val();
     const tasks = $(".tasks").val();
-    const data = {
-      leads,
-      contacts,
-      tasks,
-    };
-    console.log(data);
-    storeData(data);
+    if (leads && contacts && tasks) {
+      const data = {
+        leads,
+        contacts,
+        tasks,
+      };
+      console.log(data);
+      storeData(data);
+    } else {
+      showNotification("danger", "Hey! Empty values not allowed");
+    }
   });
 }
 
